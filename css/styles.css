@@ -1,10 +1,19 @@
 @charset "UTF-8";
 @import url(bootstrap.min.css);
 @import url(bootstrap-theme.min.css);
+@import url(owl.carousel.min.css);
+@import url(bootstrap-theme.min.css);
 @import url("https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400i&display=swap");
 * {
   margin: 0;
   padding: 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
+span {
+  display: inline-block; }
 
 a {
   color: white; }
@@ -301,5 +310,93 @@ nav ul li a:after {
     .iphone_pt2 .iphone_laying img {
       width: 718px;
       height: 491px; }
+
+.Pricing {
+  background-image: url("../images/carousel_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: 100%;
+  /* Firefox 3.6+ */
+  -webkit-background-size: 100%;
+  /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%;
+  /* Opera 9.6+ */
+  background-size: 100%;
+  padding-top: 64px;
+  padding-bottom: 215px; }
+  .Pricing span {
+    display: inline-block;
+    color: #008ed6;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 20px; }
+  .Pricing h3 {
+    color: white;
+    font-size: 36px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    margin-bottom: 93px; }
+
+.owl-dots .owl-dot span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: 0 11px;
+  border: 1px solid #4c484a;
+  text-align: center; }
+
+.owl-dots {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -140px;
+  left: 0; }
+
+.owl-dot.active span {
+  background-color: white;
+  width: 14px;
+  height: 14px; }
+
+.owl-carousel .for_img {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+  margin-right: 25px; }
+  .owl-carousel .for_img img {
+    width: 100%; }
+.owl-carousel p {
+  margin-bottom: 30px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  color: white;
+  font-size: 24px;
+  max-width: 545px;
+  padding-left: 1px; }
+.owl-carousel span {
+  display: block;
+  margin: 0; }
+
+.user {
+  display: inline-block;
+  float: left;
+  padding: 10px 0;
+  height: 60px; }
+  .user span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 600; }
+    .user span:first-of-type {
+      margin-bottom: 4px;
+      font-weight: 400; }
+
+.right {
+  float: right; }
 
 /*# sourceMappingURL=styles.css.map */
