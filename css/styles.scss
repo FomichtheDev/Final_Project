@@ -2,6 +2,7 @@
 @import "bootstrap-theme.min.css";
 @import "owl.carousel.min.css";
 @import "bootstrap-theme.min.css";
+
 $main-font: 'Source Sans Pro', sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro:300,400,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400i&display=swap');
@@ -14,15 +15,44 @@ h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+.btn {
+  color: white;
+  border: 1px #454549 solid;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 13px 0;
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 20px;
+  transition: ease width 0.3s;
+  min-width: 160px;
+  max-width: 160px;
+
+  &:hover {
+    background-color: #008ed6;
+    border-color: #008ed6;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
 span {
   display: inline-block;
 }
-.navbar-default .navbar-toggle:hover{
+
+.navbar-default .navbar-toggle:hover {
   background-color: #008ed6;
 }
-.navbar-toggle{
+
+.navbar-toggle {
   margin-top: 32px;
 }
+
 a {
   color: white;
 
@@ -44,15 +74,14 @@ ul {
 }
 
 header {
-    background-image: url("../images/photo.png");
-    background-repeat: no-repeat;
-    background-position: top center;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: cover;
+  background-image: url("../images/photo.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: cover;
   margin-bottom: 66px;
-
 
 
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -94,34 +123,105 @@ header {
   padding: 42px 12px;
 }
 
-nav ul li a {
-  &:hover, &:focus {
-    &:after {
-      width: 100%;
-    }
-  }
+.navbar-nav li a {
+  font-size: 16px;
+  color: #fffefe;
+  position: relative;
+  padding-bottom: 0;
 
   &:after {
     margin-top: 12px;
-    display: block;
     content: "";
+    display: block;
+    width: 100%;
     height: 2px;
-    width: 0;
     background-color: #008ed6;
-    transition: width .3s ease-in-out;
+    position: relative;
+    top: 2px;
+    opacity: 0;
+    transition: 0.3s;
   }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #16115b;
+    bottom: -2px;
+    left: 50%;
+    margin-left: -1px;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s;
+  }
+}
+
+.navbar-nav > li {
+  &:hover {
+    a {
+      background-color: transparent;
+
+      &:after, &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 30px;
+
+  &:after {
+    top: 30px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 2px;
+    background-color: #008ed6;
+    position: relative;
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    z-index: 1;
+    bottom: 0;
+    left: 19px;
+  }
+}
+
+.mid {
+  @extend .heading;
+
+  &:after {
+    margin: auto;
+  }
+
+  &:before {
+    left: 50%;
+  }
+}
+
+h3 {
+  font-family: $main-font;
+  color: #008ed6;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 22px;
+  text-transform: uppercase;
 }
 
 .about_us {
   font-family: $main-font;
-
-  h3 {
-    color: #008ed6;
-    font-size: 14px;
-    font-weight: 700;
-    margin: 0 0 30px;
-    text-transform: uppercase;
-  }
 
   span {
     color: white;
@@ -137,35 +237,6 @@ nav ul li a {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 66px;
-  }
-
-  button {
-    font-family: $main-font;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0 28px;
-    background-color: #008ed6;
-    border: 0;
-    border-radius: 3px;
-    display: inline-block;
-    color: white;
-    font-size: 14px;
-    height: 50px;
-    margin-right: 20px;
-  }
-
-  a {
-    color: white;
-    border: 1px #454549 solid;
-    border-radius: 3px;
-    background-color: transparent;
-    line-height: 48px;
-    font-size: 14px;
-    padding: 0 33px;
-    text-transform: uppercase;
-    font-family: $main-font;
-    font-weight: bold;
-    display: inline-block;
   }
 }
 
@@ -187,67 +258,13 @@ nav ul li a {
   padding-bottom: 76px;
   margin-bottom: 66px;
   border-bottom: 1px solid #ededed;
-
-  span {
-    font-size: 14px;
-    font-weight: 700;
-    color: #008ed6;
-  }
-
-  h3 {
-    color: black;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 35px;
-  }
 }
-.bar_start {
-  height: 2px;
-  width: 42px;
-  background-color: transparent;
-  margin: 0 0 31px;
-  &:after, &:before {
-    display: inline-block;
-    content: "";
-    width: 45%;
-    height: 100%;
-    background-color: #008ed6;
-    transition: width ease .3s;
-  }
-}
-.bar {
-  height: 2px;
-  width: 42px;
-  background-color: transparent;
-  margin: 0 auto 31px;
 
-  &:after, &:before {
-    display: inline-block;
-    content: "";
-    width: 45%;
-    height: 100%;
-    background-color: #008ed6;
-    transition: width ease .3s;
-  }
-}
 .features {
   font-family: $main-font;
   font-weight: 400;
   padding-bottom: 76px;
   border-bottom: 1px solid #ededed;
-
-  span {
-    color: #008ed6;
-    font-size: 14px;
-    display: inline-block;
-    margin: 0 0 18px;
-  }
-
-  h3 {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 35px;
-  }
 
   p {
     color: #999999;
@@ -262,6 +279,7 @@ nav ul li a {
       color: #1a1a1a;
       font-family: $main-font;
       font-size: 16px;
+      margin-top: 34px;
     }
   }
 
@@ -272,7 +290,6 @@ nav ul li a {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-bottom: 34px;
 
     &:before {
       display: inline-block;
@@ -290,42 +307,34 @@ nav ul li a {
   }
 }
 
-.feature {
-  &:first-of-type {
-    .circle {
-      &:before {
-        content: "\f108";
-      }
+.laptop {
+  .circle {
+    &:before {
+      content: "\f108";
     }
   }
 }
 
-.feature {
-  &:nth-child(2) {
-    .circle {
-      &:before {
-        content: "\f013";
-      }
+.work {
+  .circle {
+    &:before {
+      content: "\f013";
     }
   }
 }
 
-.feature {
-  &:nth-child(3) {
-    .circle {
-      &:before {
-        content: "\f164";
-      }
+.finger {
+  .circle {
+    &:before {
+      content: "\f164";
     }
   }
 }
 
-.feature {
-  &:last-of-type {
-    .circle {
-      &:before {
-        content: "\f3cd";
-      }
+.phone_1 {
+  .circle {
+    &:before {
+      content: "\f3cd";
     }
   }
 }
@@ -338,6 +347,7 @@ nav ul li a {
 
 .iphone_det {
   margin-bottom: 80px;
+
   img {
     width: 100%;
     height: 100%;
@@ -349,24 +359,11 @@ nav ul li a {
   padding-top: 54px;
   margin-bottom: 208px;
 
-  span {
-    color: #008ed6;
-    font-size: 14px;
-    margin-bottom: 24px;
-    font-weight: 700;
-  }
-
-  h3 {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 31px;
-    font-weight: 600;
-  }
-
   p {
     font-size: 18px;
     color: #999999;
     margin-bottom: 41px;
+    margin-top: 31px;
   }
 
   ul {
@@ -428,25 +425,12 @@ nav ul li a {
   padding-bottom: 40px;
 
   .customize {
-    margin-top: 132px;
 
-    span {
-      color: #008ed6;
-      font-size: 14px;
-      margin-bottom: 24px;
-      font-weight: 700;
-    }
-
-    h3 {
-      font-size: 36px;
-      color: #1a1a1a;
-      margin-bottom: 31px;
-      font-weight: 600;
-    }
 
     p {
       font-size: 18px;
       color: #999999;
+      margin-top: 29px;
     }
   }
 
@@ -470,20 +454,14 @@ nav ul li a {
   padding-bottom: 215px;
 
   span {
-    display: inline-block;
-    color: #008ed6;
-    font-family: $main-font;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 20px;
+    color: white;
   }
 
-  h3 {
-    color: white;
-    font-size: 36px;
-    font-family: $main-font;
-    font-weight: 600;
-    margin-bottom: 63px;
+  .mid {
+
+    &:before {
+      background-color: #53565c;
+    }
   }
 }
 
@@ -535,8 +513,9 @@ nav ul li a {
     font-style: italic;
     color: white;
     font-size: 24px;
-    max-width: 545px;
     padding-left: 1px;
+    margin-top: 90px;
+    text-align: left;
   }
 
   span {
@@ -564,9 +543,10 @@ nav ul li a {
   }
 }
 
+/*
 .right {
   float: right;
-}
+}*/
 
 .download {
   background-color: #15141a;
@@ -581,21 +561,6 @@ nav ul li a {
     span {
       font-weight: 700;
     }
-  }
-
-  a {
-    color: white;
-    border: 1px #454549 solid;
-    border-radius: 3px;
-    background-color: transparent;
-    line-height: 48px;
-    font-size: 14px;
-    padding: 0 33px;
-    text-transform: uppercase;
-    font-family: $main-font;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 20px;
   }
 
   button {
@@ -617,21 +582,12 @@ nav ul li a {
   padding: 60px 0;
 
   span {
-    display: inline-block;
-    color: #008ed6;
+    display: block;
     font-family: $main-font;
     font-weight: 700;
-    font-size: 14px;
     margin-bottom: 30px;
   }
 
-  h3 {
-    color: #1a1a1a;
-    font-size: 36px;
-    font-family: $main-font;
-    font-weight: 600;
-    margin-bottom: 40px;
-  }
 
   .variant {
     padding-bottom: 28px;
@@ -717,29 +673,24 @@ nav ul li a {
     }
   }
 }
-.contact_us{
+
+.contact_us {
   padding-top: 60px;
   background-color: #ededed;
   position: relative;
-  span{
-    display: inline-block;
-    color: #008ed6;
-    font-family: $main-font;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 30px;
+
+  .mid {
+    display: block;
   }
 
-  h3 {
-    color: #1a1a1a;
-    font-size: 36px;
-    font-family: $main-font;
-    font-weight: 600;
-    margin-bottom: 30px;
+  span {
+    margin-bottom: 60px;
   }
-  .contact{
+
+  .contact {
     margin-bottom: 10px;
-    span{
+
+    span {
       display: block;
       color: #999999;
       font-family: $main-font;
@@ -748,50 +699,59 @@ nav ul li a {
       margin-bottom: 0;
     }
   }
-  .point , .phone , .letter{
-      &:before{
-        display: block;
-        content: "\f3cd";
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Pro";
-        font-weight: 900;
-        color: #008ed6;
-        font-size: 32px;
-        margin-bottom: 33px;
-      }
+
+  .point, .phone, .letter {
+    &:before {
+      display: block;
+      content: "\f3cd";
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 900;
+      color: #008ed6;
+      font-size: 32px;
+      margin-bottom: 33px;
+    }
   }
-      .point{
-      &:before{
-        content: "\f3c5";
-      }
+
+  .point {
+    &:before {
+      content: "\f3c5";
     }
-    .letter{
-      &:before{
-        content: "\f0e0";
-      }
+  }
+
+  .letter {
+    &:before {
+      content: "\f0e0";
     }
+  }
 }
-form{
+
+form {
   position: absolute;
   bottom: -63px;
-  .form-group{
+
+  .form-group {
     margin-bottom: 20px;
   }
+
   font-size: 14px;
   font-weight: 300;
   font-family: $main-font;
-  .btn{
+
+  .btn {
     padding: 15px 33px;
     background-color: #008ed6;
     color: white;
     font-weight: 700;
   }
+
   padding: 59px 66px 40px;
   background-color: #15141a;
-  input.form-control{
+
+  input.form-control {
     padding: 19px 17px;
     color: white;
     background-color: transparent;
@@ -799,7 +759,8 @@ form{
     border-radius: 3px;
     height: 48px;
   }
-  textarea.form-control{
+
+  textarea.form-control {
     padding: 20px 20px 0;
     color: white;
     background-color: transparent;
@@ -811,12 +772,14 @@ form{
   }
 
 }
-footer{
+
+footer {
   padding: 55px 0 46px;
   background-color: #15141a;
 }
-.soc_icons{
-  span{
+
+.soc_icons {
+  span {
     &:before {
       display: inline-block;
       font-style: normal;
@@ -831,61 +794,69 @@ footer{
       margin-right: 16px;
       margin-bottom: 32px;
     }
-    &:first-of-type{
-      &:hover , &:focus{
-        &:before{
+
+    &:first-of-type {
+      &:hover, &:focus {
+        &:before {
           color: #008ed6;
         }
       }
-      &:before{
+
+      &:before {
         content: "\f1b4";
       }
     }
-    &:nth-child(2){
-      &:hover , &:focus{
-        &:before{
+
+    &:nth-child(2) {
+      &:hover, &:focus {
+        &:before {
           color: #008ed6;
         }
       }
-      &:before{
+
+      &:before {
         font-family: "Font Awesome 5 Pro";
         content: "\f434";
       }
     }
 
-    &:nth-child(3){
-      &:hover , &:focus{
-        &:before{
+    &:nth-child(3) {
+      &:hover, &:focus {
+        &:before {
           color: #008ed6;
         }
       }
-      &:before{
+
+      &:before {
         content: "\f099";
       }
     }
 
-    &:nth-child(4){
-      &:hover , &:focus{
-        &:before{
+    &:nth-child(4) {
+      &:hover, &:focus {
+        &:before {
           color: #008ed6;
         }
       }
-      &:before{
+
+      &:before {
         content: "\f39e";
       }
     }
 
-    &:nth-child(5){
-      &:hover , &:focus{
-        &:before{
+    &:nth-child(5) {
+      &:hover, &:focus {
+        &:before {
           color: #008ed6;
         }
       }
-      &:before{
+
+      &:before {
         content: "\f0e1";
       }
     }
-    &:last-of-type{
+
+    &:last-of-type {
       font-weight: 700;
       display: block;
     }

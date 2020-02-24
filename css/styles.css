@@ -12,6 +12,27 @@
 h1, h2, h3, h4, h5 {
   margin: 0; }
 
+.btn {
+  color: white;
+  border: 1px #454549 solid;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 14px;
+  padding: 13px 0;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 20px;
+  transition: ease width 0.3s;
+  min-width: 160px;
+  max-width: 160px; }
+  .btn:hover {
+    background-color: #008ed6;
+    border-color: #008ed6; }
+  .btn:last-of-type {
+    margin-right: 0; }
+
 span {
   display: inline-block; }
 
@@ -76,25 +97,80 @@ header {
 .nav > li > a {
   padding: 42px 12px; }
 
-nav ul li a:hover:after, nav ul li a:focus:after {
-  width: 100%; }
-nav ul li a:after {
-  margin-top: 12px;
-  display: block;
-  content: "";
-  height: 2px;
-  width: 0;
-  background-color: #008ed6;
-  transition: width .3s ease-in-out; }
+.navbar-nav li a {
+  font-size: 16px;
+  color: #fffefe;
+  position: relative;
+  padding-bottom: 0; }
+  .navbar-nav li a:after {
+    margin-top: 12px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #008ed6;
+    position: relative;
+    top: 2px;
+    opacity: 0;
+    transition: 0.3s; }
+  .navbar-nav li a:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #16115b;
+    bottom: -2px;
+    left: 50%;
+    margin-left: -1px;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s; }
+
+.navbar-nav > li:hover a {
+  background-color: transparent; }
+  .navbar-nav > li:hover a:after, .navbar-nav > li:hover a:before {
+    opacity: 1; }
+
+.heading, .mid {
+  font-size: 36px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 30px; }
+  .heading:after, .mid:after {
+    top: 30px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 2px;
+    background-color: #008ed6;
+    position: relative; }
+  .heading:before, .mid:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    z-index: 1;
+    bottom: 0;
+    left: 19px; }
+
+.mid:after {
+  margin: auto; }
+.mid:before {
+  left: 50%; }
+
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #008ed6;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 22px;
+  text-transform: uppercase; }
 
 .about_us {
   font-family: "Source Sans Pro", sans-serif; }
-  .about_us h3 {
-    color: #008ed6;
-    font-size: 14px;
-    font-weight: 700;
-    margin: 0 0 30px;
-    text-transform: uppercase; }
   .about_us span {
     color: white;
     font-size: 48px;
@@ -107,31 +183,6 @@ nav ul li a:after {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 66px; }
-  .about_us button {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 0 28px;
-    background-color: #008ed6;
-    border: 0;
-    border-radius: 3px;
-    display: inline-block;
-    color: white;
-    font-size: 14px;
-    height: 50px;
-    margin-right: 20px; }
-  .about_us a {
-    color: white;
-    border: 1px #454549 solid;
-    border-radius: 3px;
-    background-color: transparent;
-    line-height: 48px;
-    font-size: 14px;
-    padding: 0 33px;
-    text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: bold;
-    display: inline-block; }
 
 .phones img {
   width: 100%;
@@ -147,56 +198,12 @@ nav ul li a:after {
   padding-bottom: 76px;
   margin-bottom: 66px;
   border-bottom: 1px solid #ededed; }
-  .features span {
-    font-size: 14px;
-    font-weight: 700;
-    color: #008ed6; }
-  .features h3 {
-    color: black;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 35px; }
-
-.bar_start {
-  height: 2px;
-  width: 42px;
-  background-color: transparent;
-  margin: 0 0 31px; }
-  .bar_start:after, .bar_start:before {
-    display: inline-block;
-    content: "";
-    width: 45%;
-    height: 100%;
-    background-color: #008ed6;
-    transition: width ease .3s; }
-
-.bar {
-  height: 2px;
-  width: 42px;
-  background-color: transparent;
-  margin: 0 auto 31px; }
-  .bar:after, .bar:before {
-    display: inline-block;
-    content: "";
-    width: 45%;
-    height: 100%;
-    background-color: #008ed6;
-    transition: width ease .3s; }
 
 .features {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   padding-bottom: 76px;
   border-bottom: 1px solid #ededed; }
-  .features span {
-    color: #008ed6;
-    font-size: 14px;
-    display: inline-block;
-    margin: 0 0 18px; }
-  .features h3 {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 35px; }
   .features p {
     color: #999999;
     font-size: 18px;
@@ -206,15 +213,15 @@ nav ul li a:after {
     .features .feature span {
       color: #1a1a1a;
       font-family: "Source Sans Pro", sans-serif;
-      font-size: 16px; }
+      font-size: 16px;
+      margin-top: 34px; }
   .features .circle {
     margin: auto;
     text-align: center;
     border: 2px solid #ededed;
     width: 90px;
     height: 90px;
-    border-radius: 50%;
-    margin-bottom: 34px; }
+    border-radius: 50%; }
     .features .circle:before {
       display: inline-block;
       font-style: normal;
@@ -227,16 +234,16 @@ nav ul li a:after {
       font-size: 26px;
       margin-top: 26px; }
 
-.feature:first-of-type .circle:before {
+.laptop .circle:before {
   content: "\f108"; }
 
-.feature:nth-child(2) .circle:before {
+.work .circle:before {
   content: "\f013"; }
 
-.feature:nth-child(3) .circle:before {
+.finger .circle:before {
   content: "\f164"; }
 
-.feature:last-of-type .circle:before {
+.phone_1 .circle:before {
   content: "\f3cd"; }
 
 .feature_icons {
@@ -254,20 +261,11 @@ nav ul li a:after {
   font-family: "Source Sans Pro", sans-serif;
   padding-top: 54px;
   margin-bottom: 208px; }
-  .iphone_description span {
-    color: #008ed6;
-    font-size: 14px;
-    margin-bottom: 24px;
-    font-weight: 700; }
-  .iphone_description h3 {
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 31px;
-    font-weight: 600; }
   .iphone_description p {
     font-size: 18px;
     color: #999999;
-    margin-bottom: 41px; }
+    margin-bottom: 41px;
+    margin-top: 31px; }
   .iphone_description ul {
     list-style: none;
     display: block;
@@ -303,21 +301,10 @@ nav ul li a:after {
   background-color: #f2f2f2;
   padding-top: 60px;
   padding-bottom: 40px; }
-  .iphone_pt2 .customize {
-    margin-top: 132px; }
-    .iphone_pt2 .customize span {
-      color: #008ed6;
-      font-size: 14px;
-      margin-bottom: 24px;
-      font-weight: 700; }
-    .iphone_pt2 .customize h3 {
-      font-size: 36px;
-      color: #1a1a1a;
-      margin-bottom: 31px;
-      font-weight: 600; }
-    .iphone_pt2 .customize p {
-      font-size: 18px;
-      color: #999999; }
+  .iphone_pt2 .customize p {
+    font-size: 18px;
+    color: #999999;
+    margin-top: 29px; }
   .iphone_pt2 .iphone_laying img {
     width: 100%;
     height: 100%; }
@@ -336,18 +323,9 @@ nav ul li a:after {
   padding-top: 64px;
   padding-bottom: 215px; }
   .Pricing span {
-    display: inline-block;
-    color: #008ed6;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 20px; }
-  .Pricing h3 {
-    color: white;
-    font-size: 36px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    margin-bottom: 63px; }
+    color: white; }
+  .Pricing .mid:before {
+    background-color: #53565c; }
 
 .owl-dots .owl-dot span {
   display: inline-block;
@@ -387,8 +365,9 @@ nav ul li a:after {
   font-style: italic;
   color: white;
   font-size: 24px;
-  max-width: 545px;
-  padding-left: 1px; }
+  padding-left: 1px;
+  margin-top: 90px;
+  text-align: left; }
 .owl-carousel span {
   display: block;
   margin: 0; }
@@ -407,9 +386,10 @@ nav ul li a:after {
       margin-bottom: 4px;
       font-weight: 400; }
 
+/*
 .right {
-  float: right; }
-
+  float: right;
+}*/
 .download {
   background-color: #15141a;
   padding: 70px 0; }
@@ -420,19 +400,6 @@ nav ul li a:after {
     color: white; }
     .download span span {
       font-weight: 700; }
-  .download a {
-    color: white;
-    border: 1px #454549 solid;
-    border-radius: 3px;
-    background-color: transparent;
-    line-height: 48px;
-    font-size: 14px;
-    padding: 0 33px;
-    text-transform: uppercase;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: bold;
-    display: inline-block;
-    margin-right: 20px; }
   .download button {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
@@ -449,18 +416,10 @@ nav ul li a:after {
 .choose {
   padding: 60px 0; }
   .choose span {
-    display: inline-block;
-    color: #008ed6;
+    display: block;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
-    font-size: 14px;
     margin-bottom: 30px; }
-  .choose h3 {
-    color: #1a1a1a;
-    font-size: 36px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    margin-bottom: 40px; }
   .choose .variant {
     padding-bottom: 28px;
     border: 1px solid #e0e0e0; }
@@ -522,19 +481,10 @@ nav ul li a:after {
   padding-top: 60px;
   background-color: #ededed;
   position: relative; }
+  .contact_us .mid {
+    display: block; }
   .contact_us span {
-    display: inline-block;
-    color: #008ed6;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 30px; }
-  .contact_us h3 {
-    color: #1a1a1a;
-    font-size: 36px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 600;
-    margin-bottom: 30px; }
+    margin-bottom: 60px; }
   .contact_us .contact {
     margin-bottom: 10px; }
     .contact_us .contact span {

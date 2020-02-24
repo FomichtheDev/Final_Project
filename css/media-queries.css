@@ -3,129 +3,174 @@
 /*}*/
 
 @media only screen and (max-width: 1169px) {
-    .download span{
+    .download span {
         font-size: 28px;
     }
 }
+
 @media only screen and (max-width: 1024px) {
-    .iphone_description{
+    .iphone_description {
         margin-bottom: 0;
     }
-    .iphone_pt2 .customize{
+
+    .iphone_pt2 .customize {
         margin-top: 30px;
     }
 }
+
 @media only screen and (max-width: 992px) {
-    .about_us p{
+    .owl-carousel .for_img, .user {
+        float: none;
+    }
+
+    .about_us p {
         margin-bottom: 20px;
     }
-    .about_us span{
+
+    .about_us span {
         font-size: 40px;
         margin-bottom: 25px;
     }
-    .navbar-default .navbar-nav > li > a{
+
+    .navbar-default .navbar-nav > li > a {
         padding: 42px 12px 0;
     }
-    .iphone_description{
+
+    .iphone_description {
         padding-top: 0;
     }
-    .Pricing h3{
+
+    .Pricing h3 {
         margin-bottom: 30px;
     }
-    .Pricing{
+
+    .Pricing {
         padding-bottom: 115px;
     }
-    .owl-dots{
+
+    .owl-dots {
         bottom: -100px;
     }
-    .owl-carousel p{
-        font-size: 18px;
-        max-width: 320px;
-    }
-    .download a{
+
+    .download a {
         margin-right: 0;
     }
-    .choose .variant p{
+
+    .choose .variant p {
         padding: 30px 10px 20px;
         font-size: 16px;
     }
-    .choose .variant a{
+
+    .choose .variant a {
         padding: 21px 28px 20px;
     }
-    .choose .variant{
+
+    .choose .variant {
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    .owl-carousel p {
+        text-align: center;
+    }
 }
+
 @media only screen and (max-width: 768px) {
-    .navbar-default .navbar-nav > li > a{
+    .navbar-default .navbar-nav > li > a {
         padding: 30px 5px 0;
         font-size: 12px;
     }
-    .features .circle{
+
+    .features .circle {
         width: 70px;
         height: 70px;
     }
-    .features .circle:before{
+
+    .features .circle:before {
         margin-top: 16px;
     }
-    .phones{
+
+    .phones {
         margin-top: 20px;
     }
-    .features .feature span{
-        font-size: 10px;
-    }
-    .features p {
-        font-size: 12px;
-    }
-    .download a{
-        margin-right: 30px;
+
+    .features .feature span {
+        font-size: 16px;
         margin-top: 15px;
     }
-    .contact_us .contact span{
+
+    .features p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .download a {
+        max-width: 135px;
+        min-width: 135px;
+    }
+
+    .contact_us .contact span {
         font-size: 12px;
     }
-    .contact_us .letter:before , .contact_us .point:before ,.contact_us .phone:before{
+
+    .contact_us .letter:before, .contact_us .point:before, .contact_us .phone:before {
         font-size: 26px;
         margin-bottom: 10px;
     }
-    .owl-carousel{
-        padding-left: 15px;
-    }
-    .owl-carousel p{
-        font-size: 14px;
-        max-width: 150px;
-    }
-    .user span{
-        font-size: 14px;
+
+    .choose .variant a {
+        max-width: 140px;
+        min-width: 140px;
     }
 }
+
 @media only screen and (max-width: 414px) {
-    .contact_us .contact span{
+    .contact_us .contact span {
         font-size: 10px;
     }
+
+    .download a {
+        margin-top: 30px;
+        margin-right: 100px;
+    }
+
+    .download span {
+        text-align: center;
+    }
 }
+
 @media only screen and (max-width: 375px) {
-    .choose .variant a{
+    .choose .variant a {
         padding: 21px 23px 20px;
     }
-    .download a{
-        margin-right: 0;
-        padding: 0 28px;
-        vertical-align: bottom;
-        margin-bottom: 15px;
+
+    .download {
+        text-align: center;
     }
-    .about_us button{
+
+    .download a {
+        margin: 20px 0 0 0;
+    }
+
+    .about_us button {
         margin-bottom: 10px;
     }
 }
+
 @media only screen and (max-width: 375px) {
-    .choose .variant a{
+    .choose .variant a {
         padding: 21px 14px 20px;
+        max-width: 100px;
+        min-width: 100px;
+    }
+
+    .btn {
+        margin-bottom: 20px;
     }
 }
+
 /*@media only screen and (max-width: 375px) {*/
-    /*.block {*/
-        /*background-color: green;*/
-    /*}*/
+/*.block {*/
+/*background-color: green;*/
+/*}*/
 /*}*/
