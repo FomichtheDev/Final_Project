@@ -341,8 +341,6 @@ h3 {
 
 .feature_icons {
   margin-top: 73px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .iphone_det {
@@ -508,14 +506,13 @@ h3 {
   }
 
   p {
-    margin-bottom: 30px;
     font-family: $main-font;
     font-style: italic;
     color: white;
     font-size: 24px;
     padding-left: 1px;
-    margin-top: 90px;
     text-align: left;
+    margin: 90px 10px 30px;
   }
 
   span {
@@ -555,7 +552,7 @@ h3 {
   span {
     font-family: $main-font;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 34px;
     color: white;
 
     span {
@@ -779,7 +776,11 @@ footer {
 }
 
 .soc_icons {
-  span {
+  span{
+    font-weight: 700;
+    display: block;
+  }
+  a {
     &:before {
       display: inline-block;
       font-style: normal;
@@ -854,11 +855,6 @@ footer {
       &:before {
         content: "\f0e1";
       }
-    }
-
-    &:last-of-type {
-      font-weight: 700;
-      display: block;
     }
   }
 }

@@ -62,7 +62,8 @@
     }
 
     .choose .variant a {
-        padding: 21px 28px 20px;
+        padding: 21px 0 20px;
+        text-align: center;
     }
 
     .choose .variant {
@@ -76,6 +77,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .owl-carousel p{
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
     .navbar-default .navbar-nav > li > a {
         padding: 30px 5px 0;
         font-size: 12px;
@@ -101,7 +106,7 @@
 
     .features p {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .download a {
@@ -140,10 +145,6 @@
 }
 
 @media only screen and (max-width: 375px) {
-    .choose .variant a {
-        padding: 21px 23px 20px;
-    }
-
     .download {
         text-align: center;
     }
@@ -155,11 +156,8 @@
     .about_us button {
         margin-bottom: 10px;
     }
-}
-
-@media only screen and (max-width: 375px) {
     .choose .variant a {
-        padding: 21px 14px 20px;
+        padding: 21px 0 20px;
         max-width: 100px;
         min-width: 100px;
     }
